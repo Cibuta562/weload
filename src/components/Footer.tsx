@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import LanguageSwitcher from "./LanguageSwitcher";
 import type { Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/dictionary";
 import { services } from "@/lib/services";
@@ -87,11 +88,14 @@ export default function Footer({ locale, dict }: Props) {
       </div>
 
       <div className="border-t border-navy-500">
-        <div className="container flex flex-col items-center justify-between gap-2 py-6 text-sm text-navy-300 sm:flex-row">
+        <div className="container flex flex-col items-center justify-between gap-3 py-6 text-sm text-navy-300 sm:flex-row">
           <p>
             © {year} {site.name}. {dict.footer.rights}
           </p>
-          <p>{dict.footer.madeWith}</p>
+          <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
+            <p>{dict.footer.madeWith}</p>
+            <LanguageSwitcher locale={locale} tone="light" />
+          </div>
         </div>
       </div>
     </footer>

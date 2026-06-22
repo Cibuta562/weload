@@ -168,7 +168,7 @@ const ro: Dictionary = {
     servicesEyebrow: "Ce facem",
     servicesTitle: "Soluții complete de transport pentru orice tip de marfă",
     servicesSubtitle:
-      "Rutier, maritim, aerian, feroviar sau multimodal — alegem împreună soluția potrivită pentru fiecare expediere.",
+      "Rutier, maritim, aerian, feroviar sau multimodal alegem împreună soluția potrivită pentru fiecare expediere.",
     storyEyebrow: "Cum funcționează",
     storyHeading: "De la cerere la livrare, totul într-un singur flux",
     story: [
@@ -180,7 +180,7 @@ const ro: Dictionary = {
       {
         tag: "Pasul 02",
         title: "Alegem împreună ruta optimă",
-        desc: "Rutier, maritim, aerian, feroviar sau multimodal — îți propunem soluția cu cel mai bun raport între cost, timp și fiabilitate.",
+        desc: "Rutier, maritim, aerian, feroviar sau multimodal îți propunem soluția cu cel mai bun raport între cost, timp și fiabilitate.",
       },
       {
         tag: "Pasul 03",
@@ -258,7 +258,7 @@ const ro: Dictionary = {
       "Să oferim companiilor de orice dimensiune acces la transport de încredere, cu prețuri corecte și un serviciu uman, fără compromisuri la calitate.",
     visionTitle: "Viziunea noastră",
     vision:
-      "Un lanț logistic în care fiecare expediere este vizibilă, previzibilă și sustenabilă — de la prima cerere de ofertă până la ultima milă.",
+      "Un lanț logistic în care fiecare expediere este vizibilă, previzibilă și sustenabilă de la prima cerere de ofertă până la ultima milă.",
     valuesTitle: "Valorile noastre",
     values: [
       { title: "Transparență", desc: "Prețuri clare și comunicare deschisă, fără surprize." },
@@ -297,7 +297,7 @@ const ro: Dictionary = {
   },
   footer: {
     about:
-      "WeLoad — transport și logistică internațională. Soluții complete rutiere, maritime, aeriene, feroviare și multimodale.",
+      "WeLoad transport și logistică internațională. Soluții complete rutiere, maritime, aeriene, feroviare și multimodale.",
     servicesTitle: "Servicii",
     companyTitle: "Companie",
     contactTitle: "Contact",
@@ -362,19 +362,19 @@ const en: Dictionary = {
     servicesEyebrow: "What we do",
     servicesTitle: "Complete transport solutions for any type of cargo",
     servicesSubtitle:
-      "Road, sea, air, rail or multimodal — together we choose the right solution for every shipment.",
+      "Road, sea, air, rail or multimodal together we choose the right solution for every shipment.",
     storyEyebrow: "How it works",
     storyHeading: "From request to delivery, all in one flow",
     story: [
       {
         tag: "Step 01",
         title: "Tell us what you need to ship",
-        desc: "Send your cargo and route details. You get a tailored quote in under 30 minutes — no hassle.",
+        desc: "Send your cargo and route details. You get a tailored quote in under 30 minutes no hassle.",
       },
       {
         tag: "Step 02",
         title: "We pick the optimal route together",
-        desc: "Road, sea, air, rail or multimodal — we propose the solution with the best balance of cost, time and reliability.",
+        desc: "Road, sea, air, rail or multimodal we propose the solution with the best balance of cost, time and reliability.",
       },
       {
         tag: "Step 03",
@@ -452,7 +452,7 @@ const en: Dictionary = {
       "To give companies of any size access to reliable transport, with fair pricing and a human touch, with no compromise on quality.",
     visionTitle: "Our vision",
     vision:
-      "A logistics chain where every shipment is visible, predictable and sustainable — from the first quote request to the last mile.",
+      "A logistics chain where every shipment is visible, predictable and sustainable from the first quote request to the last mile.",
     valuesTitle: "Our values",
     values: [
       { title: "Transparency", desc: "Clear pricing and open communication, with no surprises." },
@@ -491,7 +491,7 @@ const en: Dictionary = {
   },
   footer: {
     about:
-      "WeLoad — international transport & logistics. Complete road, sea, air, rail and multimodal solutions.",
+      "WeLoad international transport & logistics. Complete road, sea, air, rail and multimodal solutions.",
     servicesTitle: "Services",
     companyTitle: "Company",
     contactTitle: "Contact",
@@ -500,7 +500,201 @@ const en: Dictionary = {
   },
 };
 
-const dictionaries: Record<Locale, Dictionary> = { ro, en };
+const hu: Dictionary = {
+  brandTagline: "Nemzetközi szállítás és logisztika",
+  nav: {
+    home: "Főoldal",
+    services: "Szolgáltatások",
+    about: "Rólunk",
+    contact: "Kapcsolat",
+    getQuote: "Ajánlatkérés",
+    menu: "Menü",
+    close: "Bezárás",
+    menuTagline: "Nemzetközi szállítás és logisztika",
+  },
+  cookie: {
+    text: "Sütiket használunk a böngészés javítása, a forgalom elemzése és marketingtevékenységünk támogatása érdekében.",
+    policy: "Süti szabályzat",
+    preferences: "Beállítások",
+    deny: "Elutasítom",
+    accept: "Összes elfogadása",
+  },
+  home: {
+    heroEyebrow: "Szállítás és logisztika",
+    heroTitle: "Áruja bárhová eljut, a legjobb áron",
+    heroSubtitle:
+      "Legyen szó komplett kamionról vagy gyűjtőfuvarról, belföldről vagy a nagyvilágról, teljes körű megoldásokat kínálunk áruja biztonságos és időben történő szállítására.",
+    heroCtaPrimary: "Ajánlatot kérek",
+    heroCtaSecondary: "Szolgáltatások",
+    stats: [
+      { value: "30 perc", label: "Válaszidő az ajánlatkérésre" },
+      { value: "Globális", label: "Földrajzi lefedettség" },
+      { value: "24/7", label: "Szállítási támogatás" },
+      { value: "CMR", label: "Biztosítás benne van" },
+    ],
+    liveLabel: "Aktív szállítás",
+    liveStatus: "Úton",
+    etaLabel: "Becsült kézbesítés",
+    progressLabel: "Útvonal előrehaladása",
+    trustLabel: "Árut mozgatunk Európa-szerte és azon túl",
+    markets: [
+      "Németország",
+      "Franciaország",
+      "Olaszország",
+      "Spanyolország",
+      "Hollandia",
+      "Belgium",
+      "Lengyelország",
+      "Ausztria",
+      "Egyesült Királyság",
+      "Svájc",
+      "Törökország",
+      "Szerbia",
+      "Moldova",
+      "Ukrajna",
+    ],
+    servicesEyebrow: "Amit kínálunk",
+    servicesTitle: "Teljes körű szállítási megoldások bármilyen árutípusra",
+    servicesSubtitle:
+      "Közúti, tengeri, légi, vasúti vagy multimodális együtt választjuk ki a megfelelő megoldást minden küldeményhez.",
+    storyEyebrow: "Hogyan működik",
+    storyHeading: "Az ajánlatkéréstől a kézbesítésig, egyetlen folyamatban",
+    story: [
+      {
+        tag: "01. lépés",
+        title: "Mondja el, mit szeretne szállítani",
+        desc: "Küldje el az áru és az útvonal adatait. Személyre szabott ajánlatot kap 30 percen belül, gond nélkül.",
+      },
+      {
+        tag: "02. lépés",
+        title: "Együtt választjuk ki az optimális útvonalat",
+        desc: "Közúti, tengeri, légi, vasúti vagy multimodális a költség, idő és megbízhatóság legjobb arányát kínáló megoldást javasoljuk.",
+      },
+      {
+        tag: "03. lépés",
+        title: "Valós időben követheti az árut",
+        desc: "GPS-követés és állapotfrissítések a teljes út során, dedikált koordinátorral, aki 24/7 elérhető.",
+      },
+      {
+        tag: "04. lépés",
+        title: "Időben és biztonságosan kézbesítünk",
+        desc: "Az áru a megbeszélt határidőre megérkezik, minden fuvar alapból tartalmaz CMR-biztosítást.",
+      },
+    ],
+    whyEyebrow: "Miért a WeLoad",
+    whyTitle: "Logisztikai partner, akire számíthat",
+    whySubtitle:
+      "A technológiát, a tapasztalatot és egy erős partnerhálózatot ötvözzük, hogy kifogástalan szolgáltatást nyújtsunk.",
+    why: [
+      {
+        title: "Gyors válasz",
+        desc: "Személyre szabott ajánlat 30 percen belül a kérések többségére.",
+      },
+      {
+        title: "Teljes átláthatóság",
+        desc: "GPS-követés és állapotfrissítések a szállítás teljes ideje alatt.",
+      },
+      {
+        title: "Biztosított áru",
+        desc: "Alap CMR-biztosítás, valamint kérésre kiegészítő all-risk fedezet.",
+      },
+      {
+        title: "Széles lefedettség",
+        desc: "A teljes Európai Unió, valamint az Egyesült Királyság, Svájc, Törökország, Szerbia, Moldova és Ukrajna.",
+      },
+      {
+        title: "Logisztikai tanácsadás",
+        desc: "Segítünk kiválasztani a költség és határidő szempontjából optimális szállítási módot.",
+      },
+      {
+        title: "Dedikált csapat",
+        desc: "Minden ügyfélnek dedikált koordinátor, a felvételtől a kézbesítésig.",
+      },
+    ],
+    ctaTitle: "Van szállítandó áruja?",
+    ctaSubtitle: "Mondja el, mire van szüksége, és gyorsan személyre szabott ajánlatot készítünk.",
+    ctaButton: "Lépjen kapcsolatba velünk",
+    learnMore: "Tudjon meg többet",
+  },
+  servicesPage: {
+    eyebrow: "Szolgáltatásaink",
+    title: "Szállítási megoldások minden igényre",
+    subtitle:
+      "A közúti szállítástól az összetett multimodális megoldásokig lefedjük a teljes logisztikai láncot.",
+    modesEyebrow: "Szállítási módjaink",
+    modesHeading: "Öt szállítási mód, egyetlen partner",
+    modeTag: "Szállítási mód",
+  },
+  service: {
+    whatWeOffer: "Amit kínálunk",
+    faqTitle: "Gyakori kérdések",
+    backToServices: "Összes szolgáltatás",
+    ctaTitle: "Beszéljük meg a szállítását",
+    ctaButton: "Ajánlatot kérek",
+    otherServices: "Egyéb szolgáltatások",
+  },
+  about: {
+    eyebrow: "Rólunk",
+    title: "A világ áruját mozgatjuk, gondosan ügyelve minden részletre",
+    lead: "A WeLoad egy elkötelezett logisztikai partner, amely egy egyszerű gondolat köré épül: a szállításnak kiszámíthatónak, átláthatónak és gondtalannak kell lennie.",
+    body: [
+      "Egy közös frusztrációból indultunk ki, amelyet az árujukat a nagyvilágba küldő cégek éreznek: késő ajánlatok, az átláthatóság hiánya és túl sok közvetítő. Ezért olyan csapatot építettünk, amely gyorsan reagál, nyíltan kommunikál és felelősséget vállal a felvételtől a kézbesítésig.",
+      "Ma közúti, tengeri, légi és vasúti szállításokat koordinálunk Európa-szerte és azon túl, multimodális megoldásokká kombinálva őket, amikor minden nap és minden euró számít. A technológia segít optimalizálni az útvonalakat, de az emberek teszik a különbséget.",
+    ],
+    missionTitle: "Küldetésünk",
+    mission:
+      "Hogy bármilyen méretű vállalat számára elérhetővé tegyük a megbízható szállítást, tisztességes árakkal és emberi hozzáállással, a minőség kompromisszuma nélkül.",
+    visionTitle: "Jövőképünk",
+    vision:
+      "Egy logisztikai lánc, amelyben minden küldemény látható, kiszámítható és fenntartható az első ajánlatkéréstől az utolsó kilométerig.",
+    valuesTitle: "Értékeink",
+    values: [
+      { title: "Átláthatóság", desc: "Világos árak és nyílt kommunikáció, meglepetések nélkül." },
+      { title: "Gyorsaság", desc: "Gyorsan reagálunk és betartjuk a vállalt határidőket." },
+      { title: "Gondoskodás", desc: "Minden küldeményt úgy kezelünk, mintha a sajátunk lenne." },
+      { title: "Fenntarthatóság", desc: "Optimalizáljuk az útvonalakat a környezeti hatás csökkentése érdekében." },
+    ],
+    statsTitle: "A WeLoad számokban",
+  },
+  contact: {
+    eyebrow: "Kapcsolat",
+    title: "Beszéljük meg a szállítását",
+    subtitle:
+      "Töltse ki az űrlapot, és személyre szabott ajánlattal jelentkezünk. Sürgős kérések esetén hívjon minket közvetlenül.",
+    infoTitle: "Elérhetőségek",
+    emailLabel: "E-mail",
+    phoneLabel: "Telefon",
+    hoursLabel: "Nyitvatartás",
+    hoursValue: "Hétfő – Péntek, 09:00 – 17:30",
+    addressLabel: "Székhely",
+    addressValue: "Arad, Románia",
+    form: {
+      name: "Teljes név",
+      email: "E-mail",
+      phone: "Telefon",
+      company: "Cég",
+      service: "Érdeklődési szolgáltatás",
+      servicePlaceholder: "Válasszon szolgáltatást",
+      message: "Üzenet",
+      submit: "Üzenet küldése",
+      sending: "Küldés...",
+      success: "Köszönjük! Üzenetét elküldtük. Hamarosan jelentkezünk.",
+      error: "Hiba történt. Kérjük, próbálja újra, vagy írjon nekünk közvetlenül e-mailben.",
+      required: "Kötelező mező",
+    },
+  },
+  footer: {
+    about:
+      "WeLoad nemzetközi szállítás és logisztika. Teljes körű közúti, tengeri, légi, vasúti és multimodális megoldások.",
+    servicesTitle: "Szolgáltatások",
+    companyTitle: "Vállalat",
+    contactTitle: "Kapcsolat",
+    rights: "Minden jog fenntartva.",
+    madeWith: "Nemzetközi szállítás és logisztika",
+  },
+};
+
+const dictionaries: Record<Locale, Dictionary> = { ro, en, hu };
 
 export function getDictionary(locale: Locale): Dictionary {
   return dictionaries[locale];

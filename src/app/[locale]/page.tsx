@@ -68,12 +68,8 @@ export default async function HomePage({
         </div>
 
         <div className="container relative pb-16 pt-36 lg:pb-24 lg:pt-44">
-          <p className="flex animate-fade-in items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-orange-400">
-            <span className="h-px w-10 bg-orange-500" />
-            {h.heroEyebrow}
-          </p>
           <h1
-            className="mt-6 max-w-4xl animate-fade-in text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-8xl"
+            className="max-w-4xl animate-fade-in text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-8xl"
             style={{ animationDelay: "120ms" }}
           >
             {h.heroTitle}

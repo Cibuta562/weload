@@ -48,21 +48,26 @@ export default function Header({ locale, dict }: Props) {
     };
   }, [open]);
 
+  // white bar with dark content once scrolled (menu closed); transparent + light
+  // content at the top and while the dark overlay menu is open
+  const onLight = scrolled && !open;
+
   return (
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-          scrolled || open
-            ? "border-b border-white/10 bg-navy-900/90 backdrop-blur-md"
+          onLight
+            ? "border-b border-navy-100 bg-white/95 backdrop-blur-md"
             : "bg-transparent"
         }`}
       >
         <div className="container flex h-20 items-center justify-between gap-4">
           <Link href={base} className="relative z-10 shrink-0" aria-label="WeLoad">
-            <Logo variant="light" className="h-9 w-auto" />
+            <Logo variant={onLight ? "dark" : "light"} className="h-9 w-auto" />
           </Link>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <LanguageSwitcher locale={locale} tone={onLight ? "dark" : "light"} />
             <Link
               href={`${base}/contact`}
               className="hidden rounded-full bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-orange-600 sm:inline-flex"
@@ -74,7 +79,11 @@ export default function Header({ locale, dict }: Props) {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? dict.nav.close : dict.nav.menu}
               aria-expanded={open}
-              className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur transition-colors hover:bg-white/20"
+              className={`relative z-10 flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur transition-colors ${
+                onLight
+                  ? "border-navy-200 bg-navy-50 text-navy-700 hover:bg-navy-100"
+                  : "border-white/20 bg-white/10 text-white hover:bg-white/20"
+              }`}
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
                 {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 8h16M4 16h16" />}
