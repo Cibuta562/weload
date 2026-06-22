@@ -162,7 +162,7 @@ export async function POST(request: Request) {
 
   const now = new Date().toISOString();
   const lead: Lead = {
-    source: "weload.ro",
+    source: "weload.eu",
     submittedAt: now,
     name,
     email,

@@ -29,7 +29,7 @@ export async function generateMetadata({
       template: `%s | ${site.name}`,
     },
     description: dict.home.heroSubtitle,
-    metadataBase: new URL("https://weload.ro"),
+    metadataBase: new URL("https://weload.eu"),
   };
 }
 
