@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 interface Props {
   text: string;
   policy: string;
+  policyHref: string;
   preferences: string;
   deny: string;
   accept: string;
@@ -12,7 +13,7 @@ interface Props {
 
 const STORAGE_KEY = "weload-cookie-consent";
 
-export default function CookieBanner({ text, policy, preferences, deny, accept }: Props) {
+export default function CookieBanner({ text, policy, policyHref, preferences, deny, accept }: Props) {
   const [visible, setVisible] = useState(false);
   const [shown, setShown] = useState(false); // controls slide-in animation
 
@@ -54,7 +55,7 @@ export default function CookieBanner({ text, policy, preferences, deny, accept }
         <p className="flex-1 text-sm leading-relaxed text-navy-100">
           {text}{" "}
           <a
-            href="#"
+            href={policyHref}
             className="font-semibold text-orange-300 underline underline-offset-2 hover:text-orange-200"
           >
             {policy}

@@ -5,6 +5,7 @@ import type { Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/dictionary";
 import { services } from "@/lib/services";
 import { site } from "@/lib/site";
+import { getLegal } from "@/lib/legal";
 
 interface Props {
   locale: Locale;
@@ -14,6 +15,7 @@ interface Props {
 export default function Footer({ locale, dict }: Props) {
   const base = `/${locale}`;
   const year = 2026;
+  const legal = getLegal(locale);
 
   const company = [
     { href: `${base}/about`, label: dict.nav.about },
@@ -93,7 +95,12 @@ export default function Footer({ locale, dict }: Props) {
             © {year} {site.name}. {dict.footer.rights}
           </p>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
-            <p>{dict.footer.madeWith}</p>
+            <Link href={`${base}/privacy`} className="transition-colors hover:text-orange-400">
+              {legal.ui.footerPrivacy}
+            </Link>
+            <Link href={`${base}/cookies`} className="transition-colors hover:text-orange-400">
+              {legal.ui.footerCookies}
+            </Link>
             <LanguageSwitcher locale={locale} tone="light" />
           </div>
         </div>

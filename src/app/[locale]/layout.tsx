@@ -59,6 +59,7 @@ export default async function LocaleLayout({
         <CookieBanner
           text={dict.cookie.text}
           policy={dict.cookie.policy}
+          policyHref={`/${typedLocale}/cookies`}
           preferences={dict.cookie.preferences}
           deny={dict.cookie.deny}
           accept={dict.cookie.accept}

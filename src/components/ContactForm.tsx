@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/dictionary";
 import { services } from "@/lib/services";
+import { getLegal } from "@/lib/legal";
 
 interface Props {
   locale: Locale;
@@ -15,10 +17,18 @@ type Status = "idle" | "sending" | "success" | "error";
 
 export default function ContactForm({ locale, dict, defaultService }: Props) {
   const f = dict.contact.form;
+  const ui = getLegal(locale).ui;
   const [status, setStatus] = useState<Status>("idle");
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!consent) {
+      setConsentError(true);
+      return;
+    }
+    setConsentError(false);
     setStatus("sending");
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
@@ -27,11 +37,12 @@ export default function ContactForm({ locale, dict, defaultService }: Props) {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, locale }),
+        body: JSON.stringify({ ...data, locale, consent: true }),
       });
       if (!res.ok) throw new Error("Request failed");
       setStatus("success");
       form.reset();
+      setConsent(false);
     } catch {
       setStatus("error");
     }
@@ -89,6 +100,31 @@ export default function ContactForm({ locale, dict, defaultService }: Props) {
           {f.message} *
         </label>
         <textarea id="message" name="message" required rows={5} className={inputClass} />
+      </div>
+
+      <div>
+        <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-navy-500">
+          <input
+            type="checkbox"
+            name="consent"
+            checked={consent}
+            onChange={(e) => {
+              setConsent(e.target.checked);
+              if (e.target.checked) setConsentError(false);
+            }}
+            className="mt-0.5 h-4 w-4 shrink-0 rounded border-navy-300 text-orange-500 accent-orange-500 focus:ring-orange-500"
+          />
+          <span>
+            {ui.consentLabel}{" "}
+            <Link href={`/${locale}/privacy`} className="font-semibold text-orange-500 underline underline-offset-2 hover:text-orange-600">
+              {ui.consentPolicy}
+            </Link>
+            .
+          </span>
+        </label>
+        {consentError && (
+          <p className="mt-2 text-sm font-medium text-red-600">{ui.consentRequired}</p>
+        )}
       </div>
 
       <button
