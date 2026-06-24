@@ -17,17 +17,17 @@ export interface LegalContent {
     footerPrivacy: string;
     footerCookies: string;
     lastUpdated: string;
-    consentLabel: string; // text before the policy link
-    consentPolicy: string; // the linked text
-    consentRequired: string; // validation message
+    consentLabel: string;
+    consentPolicy: string;
+    consentRequired: string;
   };
   privacy: LegalDoc;
   cookies: LegalDoc;
 }
 
-// NOTE: placeholders in [SQUARE BRACKETS] must be filled with the company's real
-// legal details before going live. This is a template, not legal advice — have it
-// reviewed by a lawyer / DPO.
+// Operator legal details (WeLoad is a brand operated by Crystal Logistics Services).
+const OP_EMAIL = "acc@crystal-logistics-services.com";
+
 const ro: LegalContent = {
   ui: {
     footerPrivacy: "Politica de confidențialitate",
@@ -40,83 +40,97 @@ const ro: LegalContent = {
   },
   privacy: {
     title: "Politica de confidențialitate",
-    updated: "[ZZ.LL.AAAA]",
+    updated: "24.06.2026",
     intro:
-      "Această politică explică ce date cu caracter personal colectăm prin acest site, în ce scop, pe ce temei legal și ce drepturi ai conform Regulamentului (UE) 2016/679 (GDPR).",
+      "Crystal Logistics Services acordă o importanță deosebită confidențialității datelor cu caracter personal. Această politică descrie modul în care colectăm, folosim, transferăm și protejăm datele tale atunci când interacționezi cu noi, inclusiv prin acest site (weload.eu), în conformitate cu Regulamentul (UE) 2016/679 (GDPR) și legislația națională aplicabilă.",
     sections: [
       {
-        h: "1. Operatorul de date",
+        h: "1. Operatorii de date",
         body: [
-          "Operatorul datelor tale este [DENUMIRE FIRMĂ], cu sediul în [ADRESĂ COMPLETĂ], înregistrată la Registrul Comerțului cu nr. [J__/____/____], CUI [CUI].",
-          "Pentru orice solicitare privind datele tale ne poți scrie la: [EMAIL DPO/CONTACT].",
+          "Datele tale sunt prelucrate de Crystal Logistics Services S.R.L., cu sediul în Strada Dr. Iacob Felix nr. 49, Etaj S, Camera 9, București, Sector 1, România, înregistrată la Registrul Comerțului cu nr. J40/4964/2021, CUI 43944517.",
+          "și de Crystal Logistics Services GmbH, cu sediul în Bahnhofstrasse nr. 21, Zug, Elveția, înregistrată cu nr. CHE-217.611.963.",
+          `WeLoad este o marcă operată de Crystal Logistics Services. Date de contact: +40 757 333 184, ${OP_EMAIL}.`,
         ],
       },
       {
-        h: "2. Ce date colectăm",
+        h: "2. Responsabilul cu protecția datelor (DPO)",
         body: [
-          "Prin formularul de contact: nume, adresă de email, număr de telefon (opțional), companie (opțional), serviciul de interes și conținutul mesajului.",
-          "Date tehnice minime generate automat de infrastructura de găzduire (ex. adresa IP în jurnalele serverului), folosite strict pentru securitate și funcționarea site-ului.",
+          `Am desemnat un Responsabil cu Protecția Datelor (DPO) care supraveghează conformitatea cu GDPR. Îl poți contacta la ${OP_EMAIL}, cu mențiunea „În atenția Responsabilului cu Protecția Datelor", sau la adresa sediului din București.`,
         ],
       },
       {
-        h: "3. Scopuri și temei legal",
+        h: "3. Ce date colectăm",
         body: [
-          "Răspunsul la solicitarea ta și pregătirea unei oferte — temei: pași precontractuali la cererea ta (art. 6(1)(b) GDPR) și/sau consimțământul tău (art. 6(1)(a) GDPR).",
-          "Securitatea și mentenanța site-ului — temei: interesul nostru legitim (art. 6(1)(f) GDPR).",
+          "Prin formularul de contact de pe acest site: nume, adresă de email, telefon (opțional), companie (opțional), serviciul de interes și conținutul mesajului.",
+          "Date tehnice generate automat: adresa IP, tipul de browser și paginile vizitate (jurnalele serverului), folosite pentru securitate și funcționarea site-ului.",
+          "În cadrul relației comerciale putem prelucra și: date ale clienților și partenerilor (date de contact, detalii de tranzacții, facturare, informații vamale), date ale persoanelor implicate în expedieri (nume, adrese, detalii de expediere) și date ale furnizorilor.",
         ],
       },
       {
-        h: "4. Cui divulgăm datele",
+        h: "4. Scopuri și temei legal",
         body: [
-          "Furnizorul de CRM [DENUMIRE FURNIZOR CRM], unde înregistrăm și gestionăm solicitarea, în calitate de persoană împuternicită.",
-          "Furnizorul de email/SMTP prin care primim notificarea solicitării.",
-          "Furnizorul de găzduire a site-ului (Vercel Inc.).",
-          "Cu acești furnizori avem/încheiem acorduri de prelucrare a datelor (DPA). Nu vindem datele tale.",
+          "Prestarea serviciilor de transport și logistică — executarea contractului (art. 6(1)(b) GDPR).",
+          "Răspunsul la solicitări și pregătirea ofertelor — pași precontractuali (art. 6(1)(b)) și/sau consimțământul tău (art. 6(1)(a)).",
+          "Îndeplinirea obligațiilor legale — documente vamale, contabile și fiscale (art. 6(1)(c)).",
+          "Gestionarea relației cu clienții și partenerii, securitatea și îmbunătățirea serviciilor — interesul nostru legitim (art. 6(1)(f)).",
+          "Comunicări comerciale / marketing — interes legitim sau consimțământ.",
         ],
       },
       {
-        h: "5. Transferuri în afara UE/SEE",
+        h: "5. Destinatarii datelor",
         body: [
-          "Unii furnizori pot prelucra date în afara SEE. În aceste cazuri ne asigurăm că există garanții adecvate (ex. Clauze Contractuale Standard ale Comisiei Europene).",
+          "Putem divulga date către parteneri și subcontractori, autorități, furnizori de servicii (inclusiv furnizorul de CRM, furnizorul de email și furnizorul de găzduire a site-ului) și asigurători, pe baza unor acorduri de confidențialitate și de prelucrare a datelor. Nu vindem datele tale.",
         ],
       },
       {
-        h: "6. Cât timp păstrăm datele",
+        h: "6. Transferuri internaționale",
         body: [
-          "Păstrăm datele din formular pe durata necesară soluționării solicitării și a relației comerciale, dar nu mai mult de [PERIOADĂ — ex. 24 de luni] de la ultimul contact, cu excepția cazului în care legea impune o perioadă mai lungă.",
+          "Unele date pot fi transferate în afara Spațiului Economic European (în special către Elveția), pe baza deciziilor de adecvare ale Comisiei Europene sau a Clauzelor Contractuale Standard (SCC).",
         ],
       },
       {
-        h: "7. Drepturile tale",
+        h: "7. Cât timp păstrăm datele",
         body: [
-          "Ai dreptul de acces, rectificare, ștergere, restricționare, portabilitate, opoziție și de a-ți retrage consimțământul în orice moment.",
-          "Îți poți exercita drepturile scriindu-ne la [EMAIL DPO/CONTACT].",
+          "Pe durata executării contractului; 10 ani pentru documentele financiar-contabile; până la retragerea consimțământului pentru marketing; până la împlinirea termenelor legale de prescripție pentru apărarea intereselor legitime.",
+        ],
+      },
+      {
+        h: "8. Drepturile tale",
+        body: [
+          "Ai dreptul de informare și acces, rectificare, ștergere („dreptul de a fi uitat"), restricționare a prelucrării, portabilitate, opoziție, de a nu fi supus unor decizii automate și de a-ți retrage consimțământul în orice moment.",
+          `Îți poți exercita drepturile scriindu-ne la ${OP_EMAIL}.`,
           "Ai dreptul de a depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), www.dataprotection.ro.",
         ],
       },
       {
-        h: "8. Securitate",
+        h: "9. Securitatea datelor",
         body: [
-          "Folosim conexiuni criptate (HTTPS) și măsuri tehnice și organizatorice rezonabile pentru a proteja datele împotriva accesului neautorizat.",
+          "Aplicăm măsuri tehnice și organizatorice: criptare, controale de acces, instruirea personalului, audituri de securitate și gestionarea incidentelor.",
         ],
       },
       {
-        h: "9. Cookie-uri",
+        h: "10. Cookie-uri",
         body: [
-          "Detalii despre stocarea locală și cookie-urile folosite găsești în Politica de cookie-uri.",
+          "Folosim cookie-uri pentru funcționarea site-ului și îmbunătățirea experienței. Detalii în Politica de cookie-uri.",
         ],
       },
       {
-        h: "10. Modificări",
+        h: "11. Modificări",
         body: [
-          "Putem actualiza această politică. Versiunea curentă este cea publicată pe această pagină, cu data ultimei actualizări de mai sus.",
+          "Putem actualiza periodic această politică. Versiunea curentă este cea publicată pe această pagină, cu data ultimei actualizări de mai sus.",
+        ],
+      },
+      {
+        h: "12. Contact",
+        body: [
+          `Email: ${OP_EMAIL} · Tel: +40 757 333 184 · Sediu: Strada Dr. Iacob Felix nr. 49, Etaj S, Camera 9, București, Sector 1, România.`,
         ],
       },
     ],
   },
   cookies: {
     title: "Politica de cookie-uri",
-    updated: "[ZZ.LL.AAAA]",
+    updated: "24.06.2026",
     intro:
       "Această politică explică cum folosim cookie-urile și tehnologiile de stocare locală pe acest site.",
     sections: [
@@ -161,81 +175,95 @@ const en: LegalContent = {
   },
   privacy: {
     title: "Privacy Policy",
-    updated: "[DD.MM.YYYY]",
+    updated: "24.06.2026",
     intro:
-      "This policy explains what personal data we collect through this website, for what purpose, on what legal basis, and what rights you have under Regulation (EU) 2016/679 (GDPR).",
+      "Crystal Logistics Services places great importance on the confidentiality of personal data. This policy describes how we collect, use, transfer and protect your data when you interact with us, including through this website (weload.eu), in accordance with Regulation (EU) 2016/679 (GDPR) and applicable national law.",
     sections: [
       {
-        h: "1. Data controller",
+        h: "1. Data controllers",
         body: [
-          "The controller of your data is [COMPANY NAME], with its registered office at [FULL ADDRESS], registered with the Trade Register under no. [J__/____/____], VAT/Tax ID [VAT ID].",
-          "For any request regarding your data, write to: [DPO/CONTACT EMAIL].",
+          "Your data is processed by Crystal Logistics Services S.R.L., with its registered office at Strada Dr. Iacob Felix no. 49, Floor S, Room 9, Bucharest, Sector 1, Romania, registered with the Trade Register under no. J40/4964/2021, Tax ID 43944517.",
+          "and by Crystal Logistics Services GmbH, with its registered office at Bahnhofstrasse no. 21, Zug, Switzerland, registered under no. CHE-217.611.963.",
+          `WeLoad is a brand operated by Crystal Logistics Services. Contact: +40 757 333 184, ${OP_EMAIL}.`,
         ],
       },
       {
-        h: "2. What we collect",
+        h: "2. Data Protection Officer (DPO)",
         body: [
-          "Through the contact form: name, email address, phone number (optional), company (optional), service of interest and the content of your message.",
-          "Minimal technical data generated automatically by the hosting infrastructure (e.g. IP address in server logs), used strictly for security and operation of the site.",
+          `We have appointed a Data Protection Officer (DPO) who oversees GDPR compliance. You can reach the DPO at ${OP_EMAIL}, marked "For the attention of the Data Protection Officer", or at the Bucharest office address.`,
         ],
       },
       {
-        h: "3. Purposes and legal basis",
+        h: "3. What we collect",
         body: [
-          "Responding to your request and preparing a quote — basis: pre-contractual steps at your request (Art. 6(1)(b) GDPR) and/or your consent (Art. 6(1)(a) GDPR).",
-          "Security and maintenance of the site — basis: our legitimate interest (Art. 6(1)(f) GDPR).",
+          "Through the contact form on this site: name, email address, phone (optional), company (optional), service of interest and the content of your message.",
+          "Automatically generated technical data: IP address, browser type and pages visited (server logs), used for security and operation of the site.",
+          "Within our business relationship we may also process: client and partner data (contact details, transaction details, billing, customs information), data of individuals involved in shipments (names, addresses, shipment details) and supplier data.",
         ],
       },
       {
-        h: "4. Who we share data with",
+        h: "4. Purposes and legal basis",
         body: [
-          "The CRM provider [CRM PROVIDER NAME], where we record and manage your request, acting as a processor.",
-          "The email/SMTP provider through which we receive the request notification.",
-          "The website hosting provider (Vercel Inc.).",
-          "We have/sign data processing agreements (DPAs) with these providers. We do not sell your data.",
+          "Providing transport and logistics services — performance of a contract (Art. 6(1)(b) GDPR).",
+          "Responding to requests and preparing quotes — pre-contractual steps (Art. 6(1)(b)) and/or your consent (Art. 6(1)(a)).",
+          "Compliance with legal obligations — customs, accounting and tax documents (Art. 6(1)(c)).",
+          "Managing the relationship with clients and partners, security and service improvement — our legitimate interest (Art. 6(1)(f)).",
+          "Commercial communications / marketing — legitimate interest or consent.",
         ],
       },
       {
-        h: "5. Transfers outside the EU/EEA",
+        h: "5. Data recipients",
         body: [
-          "Some providers may process data outside the EEA. In such cases we ensure appropriate safeguards are in place (e.g. the European Commission's Standard Contractual Clauses).",
+          "We may disclose data to partners and subcontractors, authorities, service providers (including the CRM provider, the email provider and the website hosting provider) and insurers, based on confidentiality and data processing agreements. We do not sell your data.",
         ],
       },
       {
-        h: "6. How long we keep data",
+        h: "6. International transfers",
         body: [
-          "We keep form data for as long as needed to handle your request and our business relationship, but no longer than [PERIOD — e.g. 24 months] from the last contact, unless the law requires a longer period.",
+          "Some data may be transferred outside the European Economic Area (in particular to Switzerland), based on European Commission adequacy decisions or Standard Contractual Clauses (SCC).",
         ],
       },
       {
-        h: "7. Your rights",
+        h: "7. How long we keep data",
         body: [
-          "You have the right of access, rectification, erasure, restriction, portability, objection, and to withdraw consent at any time.",
-          "You can exercise your rights by writing to [DPO/CONTACT EMAIL].",
+          "For the duration of contract performance; 10 years for financial/accounting documents; until withdrawal of marketing consent; until the statutory limitation periods for defending legitimate interests expire.",
+        ],
+      },
+      {
+        h: "8. Your rights",
+        body: [
+          "You have the right to information and access, rectification, erasure (the \"right to be forgotten\"), restriction of processing, portability, objection, not to be subject to automated decisions, and to withdraw consent at any time.",
+          `You can exercise your rights by writing to ${OP_EMAIL}.`,
           "You have the right to lodge a complaint with the Romanian Data Protection Authority (ANSPDCP), www.dataprotection.ro.",
         ],
       },
       {
-        h: "8. Security",
+        h: "9. Data security",
         body: [
-          "We use encrypted connections (HTTPS) and reasonable technical and organizational measures to protect data against unauthorized access.",
+          "We apply technical and organizational measures: encryption, access controls, staff training, security audits and incident management.",
         ],
       },
       {
-        h: "9. Cookies",
-        body: ["Details about local storage and cookies are in our Cookie Policy."],
+        h: "10. Cookies",
+        body: ["We use cookies to operate the site and improve your experience. Details in our Cookie Policy."],
       },
       {
-        h: "10. Changes",
+        h: "11. Changes",
         body: [
-          "We may update this policy. The current version is the one published on this page, with the last-updated date above.",
+          "We may update this policy periodically. The current version is the one published on this page, with the last-updated date above.",
+        ],
+      },
+      {
+        h: "12. Contact",
+        body: [
+          `Email: ${OP_EMAIL} · Phone: +40 757 333 184 · Office: Strada Dr. Iacob Felix no. 49, Floor S, Room 9, Bucharest, Sector 1, Romania.`,
         ],
       },
     ],
   },
   cookies: {
     title: "Cookie Policy",
-    updated: "[DD.MM.YYYY]",
+    updated: "24.06.2026",
     intro:
       "This policy explains how we use cookies and local-storage technologies on this website.",
     sections: [
@@ -280,81 +308,95 @@ const hu: LegalContent = {
   },
   privacy: {
     title: "Adatvédelmi szabályzat",
-    updated: "[ÉÉÉÉ.HH.NN]",
+    updated: "2026.06.24",
     intro:
-      "Ez a szabályzat ismerteti, milyen személyes adatokat gyűjtünk a weboldalon keresztül, milyen célból, milyen jogalapon, és milyen jogaid vannak az (EU) 2016/679 rendelet (GDPR) szerint.",
+      "A Crystal Logistics Services kiemelt fontosságot tulajdonít a személyes adatok bizalmas kezelésének. Ez a szabályzat ismerteti, hogyan gyűjtjük, használjuk, továbbítjuk és védjük adataidat, amikor kapcsolatba lépsz velünk, beleértve ezt a weboldalt (weload.eu) is, az (EU) 2016/679 rendelettel (GDPR) és a vonatkozó nemzeti jogszabályokkal összhangban.",
     sections: [
       {
-        h: "1. Adatkezelő",
+        h: "1. Adatkezelők",
         body: [
-          "Adataid kezelője a(z) [CÉGNÉV], székhelye: [TELJES CÍM], cégjegyzékszám: [J__/____/____], adószám: [ADÓSZÁM].",
-          "Adataiddal kapcsolatos bármilyen kérés esetén írj a következő címre: [DPO/KAPCSOLAT E-MAIL].",
+          "Adataidat a Crystal Logistics Services S.R.L. kezeli, székhelye: Strada Dr. Iacob Felix nr. 49, Etaj S, Camera 9, Bukarest, 1. kerület, Románia, cégjegyzékszám: J40/4964/2021, adószám: 43944517.",
+          "valamint a Crystal Logistics Services GmbH, székhelye: Bahnhofstrasse nr. 21, Zug, Svájc, nyilvántartási szám: CHE-217.611.963.",
+          `A WeLoad a Crystal Logistics Services által üzemeltetett márka. Elérhetőség: +40 757 333 184, ${OP_EMAIL}.`,
         ],
       },
       {
-        h: "2. Milyen adatokat gyűjtünk",
+        h: "2. Adatvédelmi tisztviselő (DPO)",
         body: [
-          "A kapcsolatfelvételi űrlapon keresztül: név, e-mail cím, telefonszám (opcionális), cég (opcionális), az érdeklődési szolgáltatás és az üzenet tartalma.",
-          "A tárhely-infrastruktúra által automatikusan generált minimális technikai adatok (pl. IP-cím a szervernaplókban), kizárólag biztonsági és működési célból.",
+          `Adatvédelmi tisztviselőt (DPO) jelöltünk ki, aki felügyeli a GDPR-nak való megfelelést. Elérhető a(z) ${OP_EMAIL} címen „Az adatvédelmi tisztviselő részére" megjelöléssel, vagy a bukaresti székhely címén.`,
         ],
       },
       {
-        h: "3. Célok és jogalap",
+        h: "3. Milyen adatokat gyűjtünk",
         body: [
-          "A kérésed megválaszolása és ajánlat készítése — jogalap: kérésedre tett szerződéskötést megelőző lépések (GDPR 6. cikk (1) b)) és/vagy a hozzájárulásod (GDPR 6. cikk (1) a)).",
-          "A weboldal biztonsága és karbantartása — jogalap: jogos érdekünk (GDPR 6. cikk (1) f)).",
+          "A weboldal kapcsolatfelvételi űrlapján keresztül: név, e-mail cím, telefon (opcionális), cég (opcionális), az érdeklődési szolgáltatás és az üzenet tartalma.",
+          "Automatikusan generált technikai adatok: IP-cím, böngészőtípus és meglátogatott oldalak (szervernaplók), biztonsági és működési célból.",
+          "Az üzleti kapcsolat keretében kezelhetünk továbbá: ügyfél- és partneradatokat (elérhetőségek, tranzakciós adatok, számlázás, vámadatok), a szállításban érintett személyek adatait (név, cím, szállítási adatok) és beszállítói adatokat.",
         ],
       },
       {
-        h: "4. Kivel osztjuk meg az adatokat",
+        h: "4. Célok és jogalap",
         body: [
-          "A [CRM SZOLGÁLTATÓ NEVE] CRM-szolgáltatóval, ahol a kérést rögzítjük és kezeljük, adatfeldolgozóként.",
-          "Az e-mail/SMTP szolgáltatóval, amelyen keresztül megkapjuk az értesítést.",
-          "A weboldal tárhelyszolgáltatójával (Vercel Inc.).",
-          "E szolgáltatókkal adatfeldolgozási megállapodást (DPA) kötünk. Adataidat nem értékesítjük.",
+          "Szállítási és logisztikai szolgáltatások nyújtása — szerződés teljesítése (GDPR 6. cikk (1) b)).",
+          "Kérések megválaszolása és ajánlatok készítése — szerződéskötést megelőző lépések (6. cikk (1) b)) és/vagy hozzájárulás (6. cikk (1) a)).",
+          "Jogi kötelezettségek teljesítése — vám-, számviteli és adóügyi dokumentumok (6. cikk (1) c)).",
+          "Ügyfél- és partnerkapcsolatok kezelése, biztonság és szolgáltatásfejlesztés — jogos érdekünk (6. cikk (1) f)).",
+          "Kereskedelmi kommunikáció / marketing — jogos érdek vagy hozzájárulás.",
         ],
       },
       {
-        h: "5. Adattovábbítás az EU/EGT-n kívülre",
+        h: "5. Adatok címzettjei",
         body: [
-          "Egyes szolgáltatók az EGT-n kívül is kezelhetnek adatokat. Ilyenkor megfelelő garanciákról gondoskodunk (pl. az Európai Bizottság általános szerződési feltételei).",
+          "Adatokat továbbíthatunk partnereknek és alvállalkozóknak, hatóságoknak, szolgáltatóknak (beleértve a CRM-szolgáltatót, az e-mail-szolgáltatót és a weboldal tárhelyszolgáltatóját) és biztosítóknak, titoktartási és adatfeldolgozási megállapodások alapján. Adataidat nem értékesítjük.",
         ],
       },
       {
-        h: "6. Meddig őrizzük az adatokat",
+        h: "6. Nemzetközi adattovábbítás",
         body: [
-          "Az űrlapadatokat a kérés és az üzleti kapcsolat kezeléséhez szükséges ideig őrizzük, de legfeljebb [IDŐSZAK — pl. 24 hónap] az utolsó kapcsolatfelvételtől, kivéve, ha a jogszabály hosszabb időt ír elő.",
+          "Egyes adatok az Európai Gazdasági Térségen kívülre (különösen Svájcba) is továbbíthatók, az Európai Bizottság megfelelőségi határozatai vagy általános szerződési feltételek (SCC) alapján.",
         ],
       },
       {
-        h: "7. A te jogaid",
+        h: "7. Meddig őrizzük az adatokat",
         body: [
-          "Jogod van a hozzáféréshez, helyesbítéshez, törléshez, korlátozáshoz, hordozhatósághoz, tiltakozáshoz, és a hozzájárulás bármikori visszavonásához.",
-          "Jogaidat a [DPO/KAPCSOLAT E-MAIL] címen gyakorolhatod.",
+          "A szerződés teljesítésének időtartamáig; 10 évig a pénzügyi-számviteli dokumentumok esetében; a marketing-hozzájárulás visszavonásáig; a jogos érdekek védelmét szolgáló törvényes elévülési határidők lejártáig.",
+        ],
+      },
+      {
+        h: "8. A te jogaid",
+        body: [
+          "Jogod van a tájékoztatáshoz és hozzáféréshez, helyesbítéshez, törléshez („elfeledtetéshez"), az adatkezelés korlátozásához, hordozhatósághoz, tiltakozáshoz, ahhoz, hogy ne legyél automatizált döntés alanya, és a hozzájárulás bármikori visszavonásához.",
+          `Jogaidat a(z) ${OP_EMAIL} címen gyakorolhatod.`,
           "Jogod van panaszt tenni a román adatvédelmi hatóságnál (ANSPDCP), www.dataprotection.ro.",
         ],
       },
       {
-        h: "8. Biztonság",
+        h: "9. Adatbiztonság",
         body: [
-          "Titkosított kapcsolatot (HTTPS) és észszerű technikai és szervezési intézkedéseket alkalmazunk az adatok védelmére a jogosulatlan hozzáférés ellen.",
+          "Technikai és szervezési intézkedéseket alkalmazunk: titkosítás, hozzáférés-vezérlés, munkatársak képzése, biztonsági auditok és incidenskezelés.",
         ],
       },
       {
-        h: "9. Sütik",
-        body: ["A helyi tárolásról és a sütikről a Süti szabályzatban olvashatsz."],
+        h: "10. Sütik",
+        body: ["Sütiket használunk a weboldal működtetéséhez és az élmény javításához. Részletek a Süti szabályzatban."],
       },
       {
-        h: "10. Változások",
+        h: "11. Változások",
         body: [
-          "A szabályzatot frissíthetjük. Az érvényes verzió az ezen az oldalon közzétett, a fenti frissítési dátummal.",
+          "A szabályzatot időről időre frissíthetjük. Az érvényes verzió az ezen az oldalon közzétett, a fenti frissítési dátummal.",
+        ],
+      },
+      {
+        h: "12. Kapcsolat",
+        body: [
+          `E-mail: ${OP_EMAIL} · Tel: +40 757 333 184 · Székhely: Strada Dr. Iacob Felix nr. 49, Etaj S, Camera 9, Bukarest, 1. kerület, Románia.`,
         ],
       },
     ],
   },
   cookies: {
     title: "Süti szabályzat",
-    updated: "[ÉÉÉÉ.HH.NN]",
+    updated: "2026.06.24",
     intro:
       "Ez a szabályzat ismerteti, hogyan használunk sütiket és helyi tárolási technológiákat a weboldalon.",
     sections: [

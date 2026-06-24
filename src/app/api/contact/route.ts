@@ -89,7 +89,7 @@ const emailCopy: Record<string, EmailCopy> = {
   ro: {
     subject: "Am primit solicitarea ta — WeLoad",
     greeting: (n) => `Bună ${n},`,
-    p1: "Îți mulțumim că ne-ai contactat! Am primit solicitarea ta și revenim cu un răspuns în cel mai scurt timp — de obicei în mai puțin de 30 de minute în programul de lucru.",
+    p1: "Îți mulțumim pentru încrederea acordată! Am primit solicitarea ta și revenim cu un răspuns în cel mai scurt timp — de obicei în mai puțin de 30 de minute în programul de lucru.",
     recapTitle: "Rezumatul solicitării tale",
     p2: "Dacă vrei să adaugi detalii, poți răspunde direct la acest email.",
     signoff: "Cu drag,",
@@ -100,7 +100,7 @@ const emailCopy: Record<string, EmailCopy> = {
   en: {
     subject: "We received your request — WeLoad",
     greeting: (n) => `Hi ${n},`,
-    p1: "Thank you for reaching out! We've received your request and will get back to you shortly — usually in under 30 minutes during business hours.",
+    p1: "Thank you for your trust! We've received your request and will get back to you shortly — usually in under 30 minutes during business hours.",
     recapTitle: "Summary of your request",
     p2: "If you'd like to add anything, just reply to this email.",
     signoff: "Best regards,",
@@ -111,7 +111,7 @@ const emailCopy: Record<string, EmailCopy> = {
   hu: {
     subject: "Megkaptuk a kérésed — WeLoad",
     greeting: (n) => `Szia ${n},`,
-    p1: "Köszönjük, hogy felvetted velünk a kapcsolatot! Megkaptuk a kérésed, és hamarosan válaszolunk — munkaidőben általában 30 percen belül.",
+    p1: "Köszönjük a bizalmat! Megkaptuk a kérésed, és hamarosan válaszolunk — munkaidőben általában 30 percen belül.",
     recapTitle: "A kérésed összefoglalása",
     p2: "Ha bármit hozzá szeretnél tenni, csak válaszolj erre az e-mailre.",
     signoff: "Üdvözlettel,",
@@ -126,26 +126,23 @@ function copyFor(locale: string): EmailCopy {
 }
 
 /** Reusable HTML signature with the WeLoad logo, contact details and a
- *  confidentiality / GDPR disclaimer. */
+ *  confidentiality / GDPR disclaimer. Stacked, table-free layout so it renders
+ *  well on every client and on mobile without media queries. */
 function signatureHtml(tagline: string): string {
   return `
-  <table cellpadding="0" cellspacing="0" border="0" style="margin-top:28px;font-family:Arial,Helvetica,sans-serif">
-    <tr>
-      <td style="vertical-align:top;padding-right:20px">
-        <img src="${SITE_URL}/email-logo.png" alt="WeLoad" width="150" style="display:block;width:150px;height:auto;border:0" />
-      </td>
-      <td style="vertical-align:top;border-left:3px solid #f15928;padding-left:20px;font-size:13px;color:#475569;line-height:1.8">
-        <div style="font-weight:bold;color:#16205b;font-size:14px;margin-bottom:4px">${tagline}</div>
-        <div><span style="color:#94a3b8">Tel:</span> <a href="tel:${site.phoneHref}" style="color:#16205b;text-decoration:none">${site.phone}</a></div>
-        <div><span style="color:#94a3b8">Email:</span> <a href="mailto:${site.email}" style="color:#16205b;text-decoration:none">${site.email}</a></div>
-        <div><span style="color:#94a3b8">Web:</span> <a href="${SITE_URL}" style="color:#16205b;text-decoration:none">${site.domain}</a></div>
-      </td>
-    </tr>
-  </table>
-  <p style="margin-top:16px;max-width:560px;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.6;color:#94a3b8">
-    This e-mail and any attachments are confidential and intended only for the addressee. If you are not the intended recipient, any use, copying or distribution is prohibited under EU-GDPR 2016/679 — please notify us and delete it.
-    <a href="${SITE_URL}/ro/privacy" style="color:#94a3b8;text-decoration:underline">${site.domain}/privacy</a>
-  </p>`;
+  <div style="margin-top:28px;max-width:560px;font-family:Arial,Helvetica,sans-serif">
+    <img src="${SITE_URL}/email-logo.png" alt="WeLoad" width="150" style="display:block;width:150px;max-width:60%;height:auto;border:0" />
+    <div style="margin-top:14px;padding-top:14px;border-top:3px solid #f15928;font-size:13px;color:#475569;line-height:1.8">
+      <div style="font-weight:bold;color:#16205b;font-size:14px;margin-bottom:4px">${tagline}</div>
+      <div><span style="color:#94a3b8">Tel:</span> <a href="tel:${site.phoneHref}" style="color:#16205b;text-decoration:none">${site.phone}</a></div>
+      <div><span style="color:#94a3b8">Email:</span> <a href="mailto:${site.email}" style="color:#16205b;text-decoration:none">${site.email}</a></div>
+      <div><span style="color:#94a3b8">Web:</span> <a href="${SITE_URL}" style="color:#16205b;text-decoration:none">${site.domain}</a></div>
+    </div>
+    <p style="margin:16px 0 0;font-size:11px;line-height:1.6;color:#94a3b8">
+      This e-mail and any attachments are confidential and intended only for the addressee. If you are not the intended recipient, any use, copying or distribution is prohibited under EU-GDPR 2016/679 — please notify us and delete it.
+      <a href="${SITE_URL}/ro/privacy" style="color:#94a3b8;text-decoration:underline">${site.domain}/privacy</a>
+    </p>
+  </div>`;
 }
 
 function recapRows(lead: Lead, c: EmailCopy): string {
