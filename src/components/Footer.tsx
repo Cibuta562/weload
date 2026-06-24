@@ -79,11 +79,6 @@ export default function Footer({ locale, dict }: Props) {
                 {site.email}
               </a>
             </li>
-            <li>
-              <a href={`tel:${site.phoneHref}`} className="text-navy-200 hover:text-orange-400">
-                {site.phone}
-              </a>
-            </li>
             <li className="text-navy-200">{dict.contact.hoursValue}</li>
           </ul>
         </div>

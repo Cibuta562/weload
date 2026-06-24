@@ -35,7 +35,6 @@ export default async function ContactPage({
 
   const infoItems = [
     { label: c.emailLabel, value: site.email, href: `mailto:${site.email}` },
-    { label: c.phoneLabel, value: site.phone, href: `tel:${site.phoneHref}` },
     { label: c.hoursLabel, value: c.hoursValue },
     { label: c.addressLabel, value: c.addressValue },
   ];
