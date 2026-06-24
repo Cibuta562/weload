@@ -125,7 +125,8 @@ function copyFor(locale: string): EmailCopy {
   return emailCopy[locale] ?? emailCopy.ro;
 }
 
-/** Reusable HTML signature with the WeLoad logo and contact details. */
+/** Reusable HTML signature with the WeLoad logo, contact details and a
+ *  confidentiality / GDPR disclaimer. */
 function signatureHtml(tagline: string): string {
   return `
   <table cellpadding="0" cellspacing="0" border="0" style="margin-top:28px;font-family:Arial,Helvetica,sans-serif">
@@ -138,10 +139,13 @@ function signatureHtml(tagline: string): string {
         <div><span style="color:#94a3b8">Tel:</span> <a href="tel:${site.phoneHref}" style="color:#16205b;text-decoration:none">${site.phone}</a></div>
         <div><span style="color:#94a3b8">Email:</span> <a href="mailto:${site.email}" style="color:#16205b;text-decoration:none">${site.email}</a></div>
         <div><span style="color:#94a3b8">Web:</span> <a href="${SITE_URL}" style="color:#16205b;text-decoration:none">${site.domain}</a></div>
-        <div><span style="color:#94a3b8">Sediu:</span> ${site.address}</div>
       </td>
     </tr>
-  </table>`;
+  </table>
+  <p style="margin-top:16px;max-width:560px;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.6;color:#94a3b8">
+    This e-mail and any attachments are confidential and intended only for the addressee. If you are not the intended recipient, any use, copying or distribution is prohibited under EU-GDPR 2016/679 — please notify us and delete it.
+    <a href="${SITE_URL}/ro/privacy" style="color:#94a3b8;text-decoration:underline">${site.domain}/privacy</a>
+  </p>`;
 }
 
 function recapRows(lead: Lead, c: EmailCopy): string {
