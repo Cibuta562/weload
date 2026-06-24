@@ -97,7 +97,7 @@ const ro: LegalContent = {
       {
         h: "8. Drepturile tale",
         body: [
-          "Ai dreptul de informare și acces, rectificare, ștergere („dreptul de a fi uitat"), restricționare a prelucrării, portabilitate, opoziție, de a nu fi supus unor decizii automate și de a-ți retrage consimțământul în orice moment.",
+          "Ai dreptul de informare și acces, rectificare, ștergere (dreptul de a fi uitat), restricționare a prelucrării, portabilitate, opoziție, de a nu fi supus unor decizii automate și de a-ți retrage consimțământul în orice moment.",
           `Îți poți exercita drepturile scriindu-ne la ${OP_EMAIL}.`,
           "Ai dreptul de a depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), www.dataprotection.ro.",
         ],
@@ -365,7 +365,7 @@ const hu: LegalContent = {
       {
         h: "8. A te jogaid",
         body: [
-          "Jogod van a tájékoztatáshoz és hozzáféréshez, helyesbítéshez, törléshez („elfeledtetéshez"), az adatkezelés korlátozásához, hordozhatósághoz, tiltakozáshoz, ahhoz, hogy ne legyél automatizált döntés alanya, és a hozzájárulás bármikori visszavonásához.",
+          "Jogod van a tájékoztatáshoz és hozzáféréshez, helyesbítéshez, törléshez (elfeledtetéshez), az adatkezelés korlátozásához, hordozhatósághoz, tiltakozáshoz, ahhoz, hogy ne legyél automatizált döntés alanya, és a hozzájárulás bármikori visszavonásához.",
           `Jogaidat a(z) ${OP_EMAIL} címen gyakorolhatod.`,
           "Jogod van panaszt tenni a román adatvédelmi hatóságnál (ANSPDCP), www.dataprotection.ro.",
         ],
